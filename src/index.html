@@ -3,9 +3,128 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Restaurant Page</title>
+        <title>Sauga Scoops</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+
+            html,
+            body {
+                height: 100%;
+            }
+
+            body {
+                background-image: url("background-img.jpg");
+                background-size: cover;
+                background-attachment: fixed;
+                background-repeat: no-repeat;
+                background-position: right 0;
+
+                display: flex;
+                flex-direction: column;
+            }
+
+            header {
+                padding: 6px;
+            }
+
+            h1 {
+                text-indent: -9999px;
+                background: url(logo.png) no-repeat top left;
+                background-size: contain;
+            }
+
+            li {
+                background-color: black;
+                border: 1px solid #ffff00;
+                border-radius: 4px;
+                padding: 4px;
+            }
+
+            li a {
+                font-size: 18px;
+                text-decoration: none;
+                color: #ffff00;
+            }
+
+            nav ul {
+                list-style-type: none;
+                display: flex;
+                gap: 5px;
+            }
+
+            #content {
+                flex: 1;
+
+                display: flex;
+                justify-content: end;
+            }
+
+            #info-container {
+                background-color: white;
+                width: min(550px, 80%);
+                margin: 10vw 10vw 10vw 0;
+                padding: 18px;
+                border-radius: 4px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            footer {
+                color: #ffff00;
+                margin-top: auto;
+            }
+        </style>
     </head>
     <body>
-        <div id="content"></div>
+        <header>
+            <h1>Sauga Scoops</h1>
+        </header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div id="content">
+            <div id="info-container">
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Phasellus tellus felis, tempus et bibendum eget, maximus at
+                    mauris. Duis id mauris at risus porta faucibus ac sed dolor.
+                    Integer sed magna tellus. Duis a convallis libero. Duis
+                    neque risus, pretium eu porta nec, varius semper quam. Duis
+                    ac sapien tempus, porttitor dui ut, viverra arcu. Sed elit
+                    justo, porta in laoreet at, aliquet ut enim. Nunc vitae
+                    venenatis eros. Phasellus feugiat ipsum ipsum, mollis
+                    placerat diam faucibus at. Maecenas tincidunt quam non
+                    vehicula eleifend. Pellentesque nunc sem, hendrerit et
+                    viverra sit amet, pulvinar id tortor. Phasellus euismod
+                    ipsum non odio consectetur mollis.
+                </p>
+
+                <!-- <p>
+                    Donec dui magna, rutrum vitae quam eget, iaculis
+                    pellentesque neque. Mauris gravida, turpis vitae blandit
+                    facilisis, eros quam accumsan quam, non suscipit justo
+                    libero molestie orci. Proin cursus sollicitudin mauris vel
+                    ultrices. Cras odio risus, vulputate in enim id, ullamcorper
+                    pellentesque velit. Donec a nibh euismod, tempus turpis vel,
+                    venenatis ex. Sed dui nunc, viverra at sollicitudin at,
+                    facilisis quis mauris. Vivamus id est nec elit facilisis
+                    suscipit. Phasellus a tincidunt lectus, et tincidunt elit.
+                    Donec consequat placerat eleifend. Aenean commodo magna sed
+                    diam congue finibus. Cras ut nibh lobortis sapien fringilla
+                    sodales vitae a nunc.
+                </p> -->
+            </div>
+        </div>
+        <footer>Footer</footer>
     </body>
 </html>
