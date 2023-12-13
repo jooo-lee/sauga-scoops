@@ -20,7 +20,7 @@
 }
 
 html {
-    background-color: #181818;
+    background-color: black;
 }
 
 html,
@@ -34,14 +34,11 @@ body {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-position: right 0;
-
+    padding: 12px;
     display: flex;
     flex-direction: column;
-}
-
-header {
-    margin-top: 8px;
-    padding: 6px;
+    align-items: center;
+    gap: 12px;
 }
 
 h1 {
@@ -49,23 +46,6 @@ h1 {
     font-size: 3rem;
     color: var(--theme-color);
     text-align: center;
-}
-
-li {
-    background-color: black;
-}
-
-li a {
-    font-size: 18px;
-    text-decoration: none;
-    color: var(--theme-color);
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
 }
 
 #container {
@@ -80,9 +60,9 @@ nav ul {
     border-radius: 8px;
     border: 1px solid var(--theme-color);
     color: var(--theme-color);
-    width: min(800px, 80%);
-    margin: 48px;
-    padding: 18px;
+    width: min(800px, 90%);
+    padding: 12px;
+    font-size: 1.2rem;
 
     display: flex;
     flex-direction: column;
@@ -90,12 +70,52 @@ nav ul {
     align-items: center;
 }
 
+li {
+    background-color: black;
+}
+
+li a {
+    text-decoration: none;
+    color: var(--theme-color);
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
 #two-scoop-cone {
     width: min(450px, 100%);
 }
 
 footer {
-    margin-bottom: 8px;
-    text-align: center;
+    background-color: black;
     color: var(--theme-color);
+    width: fit-content;
+    padding: 8px;
+    border: 1px solid var(--theme-color);
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 1rem;
+}
+
+footer a {
+    color: var(--theme-color);
+    text-decoration: none;
+}
+
+#github-icon {
+    height: 1.5rem;
 }

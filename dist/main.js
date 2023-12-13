@@ -44,7 +44,10 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
 const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
+const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
 ;// CONCATENATED MODULE: ./src/index.js
+
 
 
 
@@ -55,8 +58,14 @@ const twoScoopCone = new Image();
 twoScoopCone.src = two_scoop_cone_namespaceObject;
 twoScoopCone.setAttribute("id", "two-scoop-cone");
 twoScoopCone.setAttribute("alt", "Two scoop ice cream cone image");
-
 content.insertBefore(twoScoopCone, content.lastElementChild);
+
+// Add GitHub logo as link in footer
+const GitHubIcon = new Image();
+GitHubIcon.src = github_mark_pink_namespaceObject;
+GitHubIcon.setAttribute("id", "github-icon");
+GitHubIcon.setAttribute("alt", "GitHub icon");
+document.querySelector("#github-link").appendChild(GitHubIcon);
 
 /******/ })()
 ;
