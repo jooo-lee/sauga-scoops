@@ -1,11 +1,22 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: "Ending Loving";
+    src: url("assets/ending-loving.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Amiamie Round";
+    src: url("assets/amiamie-round.otf") format("opentype");
 }
 
 :root {
     --theme-color: #f2b1ae;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Amiamie Round";
 }
 
 html {
@@ -18,7 +29,7 @@ body {
 }
 
 body {
-    background-image: url("images/background-img.jpg");
+    background-image: url("assets/background-img.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -34,9 +45,10 @@ header {
 }
 
 h1 {
-    text-indent: -9999px;
-    background: url("images/logo.png") no-repeat center;
-    background-size: contain;
+    font-family: "Ending Loving";
+    font-size: 3rem;
+    color: var(--theme-color);
+    text-align: center;
 }
 
 li {
@@ -78,8 +90,8 @@ nav ul {
     align-items: center;
 }
 
-#two-scoop-img {
-    width: 100%;
+#two-scoop-cone {
+    width: min(450px, 100%);
 }
 
 footer {
