@@ -64,8 +64,11 @@ h1 {
     align-items: center;
 }
 
-li {
-    background-color: black;
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
 }
 
 li a {
@@ -73,11 +76,9 @@ li a {
     color: var(--theme-color);
 }
 
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
+#active-tab {
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 #two-scoop-cone {
