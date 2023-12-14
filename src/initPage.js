@@ -1,6 +1,13 @@
 import twoScoopConeImg from "./assets/two-scoop-cone.png";
 
-// TODO: create header
+function createHeader() {
+    const body = document.querySelector("body");
+    const header = document.createElement("header");
+    const h1 = document.createElement("h1");
+    h1.textContent = "Sauga Scoops";
+    header.appendChild(h1);
+    body.insertBefore(header, body.firstChild);
+}
 
 function createNav(parent, activeTab) {
     const nav = document.createElement("nav");
@@ -42,6 +49,7 @@ function createEst(parent) {
 // TODO: create footer
 
 function initPage() {
+    createHeader();
     const contentDiv = document.querySelector("#content");
     createNav(contentDiv, "Home");
     createQuote(contentDiv);
