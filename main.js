@@ -44,6 +44,60 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
 const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/initPage.js
+
+
+// TODO: create header
+
+function createNav(parent, activeTab) {
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+    const tabs = ["Home", "Menu", "Contact"];
+    for (const tab of tabs) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.textContent = tab;
+        if (tab == activeTab) a.setAttribute("id", "active-tab");
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+    nav.appendChild(ul);
+    parent.appendChild(nav);
+}
+
+function createQuote(parent) {
+    const p = document.createElement("p");
+    p.textContent = "« BEST ICE CREAM IN THE CITY ! »";
+    parent.appendChild(p);
+}
+
+function createTwoScoopCone(parent) {
+    const twoScoopCone = new Image();
+    twoScoopCone.src = two_scoop_cone_namespaceObject;
+    twoScoopCone.setAttribute("id", "two-scoop-cone");
+    twoScoopCone.setAttribute("alt", "Two scoop ice cream cone image");
+    parent.appendChild(twoScoopCone);
+}
+
+function createEst(parent) {
+    const p = document.createElement("p");
+    p.textContent = "SCOOPIN' SINCE 2000";
+    parent.appendChild(p);
+}
+
+// TODO: create footer
+
+function initPage() {
+    const contentDiv = document.querySelector("#content");
+    createNav(contentDiv, "Home");
+    createQuote(contentDiv);
+    createTwoScoopCone(contentDiv);
+    createEst(contentDiv);
+}
+
+/* harmony default export */ const src_initPage = (initPage);
+
 ;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
 const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
 ;// CONCATENATED MODULE: ./src/index.js
@@ -51,14 +105,7 @@ const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51
 
 
 
-const content = document.querySelector("#content");
-
-// Add two scoop cone image to content
-const twoScoopCone = new Image();
-twoScoopCone.src = two_scoop_cone_namespaceObject;
-twoScoopCone.setAttribute("id", "two-scoop-cone");
-twoScoopCone.setAttribute("alt", "Two scoop ice cream cone image");
-content.insertBefore(twoScoopCone, content.lastElementChild);
+src_initPage();
 
 // Add GitHub logo as link in footer
 const GitHubIcon = new Image();
