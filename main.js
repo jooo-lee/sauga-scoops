@@ -42,7 +42,7 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/nav.js
+;// CONCATENATED MODULE: ./src/js/nav.js
 function createNav(parent, activeTab) {
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
@@ -64,7 +64,7 @@ function createNav(parent, activeTab) {
 
 ;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
 const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
-;// CONCATENATED MODULE: ./src/home.js
+;// CONCATENATED MODULE: ./src/js/home.js
 
 
 
@@ -100,7 +100,7 @@ function createHomeContent() {
 
 ;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
 const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
-;// CONCATENATED MODULE: ./src/initPage.js
+;// CONCATENATED MODULE: ./src/js/initPage.js
 
 
 
@@ -150,13 +150,13 @@ function initPage() {
     createFooter();
 }
 
-/* harmony default export */ const src_initPage = (initPage);
+/* harmony default export */ const js_initPage = (initPage);
 
-;// CONCATENATED MODULE: ./src/index.js
+;// CONCATENATED MODULE: ./src/js/index.js
 
 
 
-src_initPage();
+js_initPage();
 
 /******/ })()
 ;
