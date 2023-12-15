@@ -110,6 +110,8 @@ footer div {
 footer a {
     color: var(--theme-color);
     text-decoration: none;
+    display: flex;
+    align-items: center;
 }
 
 #github-icon {
