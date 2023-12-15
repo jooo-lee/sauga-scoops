@@ -42,12 +42,16 @@ body {
     gap: 12px;
 }
 
+/* -------------------------- Header -------------------------- */
+
 h1 {
     font-family: "Ending Loving";
     font-size: 3rem;
     color: var(--theme-color);
     text-align: center;
 }
+
+/* -------------------------- Main Content -------------------------- */
 
 #content {
     background-color: black;
@@ -82,9 +86,13 @@ li a {
     text-underline-offset: 3px;
 }
 
+/* -------------------------- Home Content -------------------------- */
+
 #two-scoop-cone {
     width: min(450px, 100%);
 }
+
+/* -------------------------- Footer -------------------------- */
 
 footer {
     background-color: black;
