@@ -16,7 +16,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Amiamie Round";
+    font-family: "Amiamie Round", Arial, Helvetica, sans-serif;
 }
 
 html {
@@ -45,7 +45,7 @@ body {
 /* -------------------------- Header -------------------------- */
 
 h1 {
-    font-family: "Ending Loving";
+    font-family: "Ending Loving", "Courier New", Courier, monospace;
     font-size: 3rem;
     color: var(--theme-color);
     text-align: center;
