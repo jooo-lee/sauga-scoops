@@ -1,5 +1,5 @@
 import createHomeContent from "./home.js";
-import githubIconSvg from "./assets/github-mark-pink.svg";
+import githubIconSvg from "../assets/github-mark-pink.svg";
 
 function createHeader() {
     const body = document.querySelector("body");

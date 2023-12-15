@@ -1,5 +1,5 @@
 import createNav from "./nav.js";
-import twoScoopConeImg from "./assets/two-scoop-cone.png";
+import twoScoopConeImg from "../assets/two-scoop-cone.png";
 
 function createQuote(parent) {
     const p = document.createElement("p");
