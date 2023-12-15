@@ -1,4 +1,5 @@
 import twoScoopConeImg from "./assets/two-scoop-cone.png";
+import githubIconSvg from "./assets/github-mark-pink.svg";
 
 function createHeader() {
     const body = document.querySelector("body");
@@ -46,7 +47,36 @@ function createEst(parent) {
     parent.appendChild(p);
 }
 
-// TODO: create footer
+function createFooter() {
+    const body = document.querySelector("body");
+    const footer = document.createElement("footer");
+    const topDiv = document.createElement("div");
+    const freepikLink = document.createElement("a");
+    freepikLink.setAttribute(
+        "href",
+        "https://www.freepik.com/author/surang/icons/surang-red_752?t=f&query=ice+cream"
+    );
+    freepikLink.textContent = "Ice Cream Icons from Freepik";
+    freepikLink.setAttribute("target", "_blank");
+    topDiv.appendChild(freepikLink);
+    footer.appendChild(topDiv);
+    const bottomDiv = document.createElement("div");
+    const p = document.createElement("p");
+    p.textContent = "© Joseph Lee 2023";
+    bottomDiv.appendChild(p);
+    const githubLink = document.createElement("a");
+    githubLink.setAttribute("id", "github-link");
+    githubLink.setAttribute("href", "https://github.com/jooo-lee");
+    githubLink.setAttribute("target", "_blank");
+    const githubIcon = new Image();
+    githubIcon.src = githubIconSvg;
+    githubIcon.setAttribute("id", "github-icon");
+    githubIcon.setAttribute("alt", "GitHub icon");
+    githubLink.appendChild(githubIcon);
+    bottomDiv.appendChild(githubLink);
+    footer.appendChild(bottomDiv);
+    body.appendChild(footer);
+}
 
 function initPage() {
     createHeader();
@@ -55,6 +85,7 @@ function initPage() {
     createQuote(contentDiv);
     createTwoScoopCone(contentDiv);
     createEst(contentDiv);
+    createFooter();
 }
 
 export default initPage;
