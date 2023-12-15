@@ -42,11 +42,7 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
-const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
-;// CONCATENATED MODULE: ./src/home.js
-
-
+;// CONCATENATED MODULE: ./src/nav.js
 function createNav(parent, activeTab) {
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
@@ -63,6 +59,14 @@ function createNav(parent, activeTab) {
     nav.appendChild(ul);
     parent.appendChild(nav);
 }
+
+/* harmony default export */ const nav = (createNav);
+
+;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
+const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/home.js
+
+
 
 function createQuote(parent) {
     const p = document.createElement("p");
@@ -86,7 +90,7 @@ function createEst(parent) {
 
 function createHomeContent() {
     const contentDiv = document.querySelector("#content");
-    createNav(contentDiv, "Home");
+    nav(contentDiv, "Home");
     createQuote(contentDiv);
     createTwoScoopCone(contentDiv);
     createEst(contentDiv);
