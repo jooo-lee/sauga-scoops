@@ -44,7 +44,10 @@ var __webpack_exports__ = {};
 
 ;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
 const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
+const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
 ;// CONCATENATED MODULE: ./src/initPage.js
+
 
 
 function createHeader() {
@@ -93,7 +96,36 @@ function createEst(parent) {
     parent.appendChild(p);
 }
 
-// TODO: create footer
+function createFooter() {
+    const body = document.querySelector("body");
+    const footer = document.createElement("footer");
+    const topDiv = document.createElement("div");
+    const freepikLink = document.createElement("a");
+    freepikLink.setAttribute(
+        "href",
+        "https://www.freepik.com/author/surang/icons/surang-red_752?t=f&query=ice+cream"
+    );
+    freepikLink.textContent = "Ice Cream Icons from Freepik";
+    freepikLink.setAttribute("target", "_blank");
+    topDiv.appendChild(freepikLink);
+    footer.appendChild(topDiv);
+    const bottomDiv = document.createElement("div");
+    const p = document.createElement("p");
+    p.textContent = "© Joseph Lee 2023";
+    bottomDiv.appendChild(p);
+    const githubLink = document.createElement("a");
+    githubLink.setAttribute("id", "github-link");
+    githubLink.setAttribute("href", "https://github.com/jooo-lee");
+    githubLink.setAttribute("target", "_blank");
+    const githubIcon = new Image();
+    githubIcon.src = github_mark_pink_namespaceObject;
+    githubIcon.setAttribute("id", "github-icon");
+    githubIcon.setAttribute("alt", "GitHub icon");
+    githubLink.appendChild(githubIcon);
+    bottomDiv.appendChild(githubLink);
+    footer.appendChild(bottomDiv);
+    body.appendChild(footer);
+}
 
 function initPage() {
     createHeader();
@@ -102,25 +134,16 @@ function initPage() {
     createQuote(contentDiv);
     createTwoScoopCone(contentDiv);
     createEst(contentDiv);
+    createFooter();
 }
 
 /* harmony default export */ const src_initPage = (initPage);
 
-;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
-const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
 ;// CONCATENATED MODULE: ./src/index.js
 
 
 
-
 src_initPage();
-
-// Add GitHub logo as link in footer
-const GitHubIcon = new Image();
-GitHubIcon.src = github_mark_pink_namespaceObject;
-GitHubIcon.setAttribute("id", "github-icon");
-GitHubIcon.setAttribute("alt", "GitHub icon");
-document.querySelector("#github-link").appendChild(GitHubIcon);
 
 /******/ })()
 ;
