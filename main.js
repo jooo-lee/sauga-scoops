@@ -67,7 +67,6 @@ const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e
 ;// CONCATENATED MODULE: ./src/js/home.js
 
 
-
 function createQuote(parent) {
     const p = document.createElement("p");
     p.textContent = "BEST ICE CREAM IN THE CITY";
@@ -88,12 +87,10 @@ function createEst(parent) {
     parent.appendChild(p);
 }
 
-function createHomeContent() {
-    const contentDiv = document.querySelector("#content");
-    nav(contentDiv, "Home");
-    createQuote(contentDiv);
-    createTwoScoopCone(contentDiv);
-    createEst(contentDiv);
+function createHomeContent(parent) {
+    createQuote(parent);
+    createTwoScoopCone(parent);
+    createEst(parent);
 }
 
 /* harmony default export */ const home = (createHomeContent);
@@ -101,6 +98,7 @@ function createHomeContent() {
 ;// CONCATENATED MODULE: ./src/assets/github-mark-pink.svg
 const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51445d780baa14d.svg";
 ;// CONCATENATED MODULE: ./src/js/initPage.js
+
 
 
 
@@ -145,8 +143,10 @@ function createFooter() {
 }
 
 function initPage() {
+    const contentDiv = document.querySelector("#content");
     createHeader();
-    home();
+    nav(contentDiv, "Home");
+    home(contentDiv);
     createFooter();
 }
 
