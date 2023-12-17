@@ -1,4 +1,3 @@
-import createNav from "./nav.js";
 import twoScoopConeImg from "../assets/two-scoop-cone.png";
 
 function createQuote(parent) {
@@ -21,12 +20,10 @@ function createEst(parent) {
     parent.appendChild(p);
 }
 
-function createHomeContent() {
-    const contentDiv = document.querySelector("#content");
-    createNav(contentDiv, "Home");
-    createQuote(contentDiv);
-    createTwoScoopCone(contentDiv);
-    createEst(contentDiv);
+function createHomeContent(parent) {
+    createQuote(parent);
+    createTwoScoopCone(parent);
+    createEst(parent);
 }
 
 export default createHomeContent;

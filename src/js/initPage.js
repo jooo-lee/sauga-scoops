@@ -1,3 +1,4 @@
+import createNav from "./nav.js";
 import createHomeContent from "./home.js";
 import githubIconSvg from "../assets/github-mark-pink.svg";
 
@@ -42,8 +43,10 @@ function createFooter() {
 }
 
 function initPage() {
+    const contentDiv = document.querySelector("#content");
     createHeader();
-    createHomeContent();
+    createNav(contentDiv, "Home");
+    createHomeContent(contentDiv);
     createFooter();
 }
 
