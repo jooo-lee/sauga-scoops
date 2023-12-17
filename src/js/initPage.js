@@ -10,7 +10,9 @@ function createHeader() {
     body.insertBefore(header, body.firstChild);
 }
 
-function createNav(parent, tabs, activeTab) {
+function createNav(tabs, activeTab) {
+    const body = document.querySelector("body");
+    const contentDiv = document.querySelector("#content");
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
     for (const tab of tabs) {
@@ -23,7 +25,7 @@ function createNav(parent, tabs, activeTab) {
         ul.appendChild(li);
     }
     nav.appendChild(ul);
-    parent.appendChild(nav);
+    body.insertBefore(nav, contentDiv);
 }
 
 function createFooter() {
@@ -61,7 +63,7 @@ function initPage() {
     const tabs = ["Home", "Menu", "Contact"];
     const contentDiv = document.querySelector("#content");
     createHeader();
-    createNav(contentDiv, tabs, "Home");
+    createNav(tabs, "Home");
     createHomeContent(contentDiv);
     createFooter();
 }

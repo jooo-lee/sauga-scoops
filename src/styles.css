@@ -51,6 +51,30 @@ h1 {
     text-align: center;
 }
 
+/* -------------------------- Nav -------------------------- */
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+}
+
+li a {
+    display: inline-block;
+    text-decoration: none;
+    background-color: black;
+    color: var(--theme-color);
+    padding: 6px;
+    border-radius: 8px;
+    border: 1px solid var(--theme-color);
+}
+
+#active-tab {
+    color: black;
+    background-color: var(--theme-color);
+}
+
 /* -------------------------- Main Content -------------------------- */
 
 #content {
@@ -67,23 +91,6 @@ h1 {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-}
-
-nav ul {
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-}
-
-li a {
-    text-decoration: none;
-    color: var(--theme-color);
-}
-
-#active-tab {
-    text-decoration: underline;
-    text-underline-offset: 3px;
 }
 
 /* -------------------------- Home Content -------------------------- */
