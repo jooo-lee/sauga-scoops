@@ -70,7 +70,7 @@ const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e
 
 function createQuote(parent) {
     const p = document.createElement("p");
-    p.textContent = "« BEST ICE CREAM IN THE CITY ! »";
+    p.textContent = "BEST ICE CREAM IN THE CITY";
     parent.appendChild(p);
 }
 
