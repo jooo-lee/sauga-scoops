@@ -3,7 +3,7 @@ import twoScoopConeImg from "../assets/two-scoop-cone.png";
 
 function createQuote(parent) {
     const p = document.createElement("p");
-    p.textContent = "« BEST ICE CREAM IN THE CITY ! »";
+    p.textContent = "BEST ICE CREAM IN THE CITY";
     parent.appendChild(p);
 }
 
