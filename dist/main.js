@@ -42,26 +42,6 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/js/nav.js
-function createNav(parent, activeTab) {
-    const nav = document.createElement("nav");
-    const ul = document.createElement("ul");
-    const tabs = ["Home", "Menu", "Contact"];
-    for (const tab of tabs) {
-        const li = document.createElement("li");
-        const a = document.createElement("a");
-        a.setAttribute("href", "#");
-        a.textContent = tab;
-        if (tab == activeTab) a.setAttribute("id", "active-tab");
-        li.appendChild(a);
-        ul.appendChild(li);
-    }
-    nav.appendChild(ul);
-    parent.appendChild(nav);
-}
-
-/* harmony default export */ const nav = (createNav);
-
 ;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
 const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
 ;// CONCATENATED MODULE: ./src/js/home.js
@@ -101,7 +81,6 @@ const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51
 
 
 
-
 function createHeader() {
     const body = document.querySelector("body");
     const header = document.createElement("header");
@@ -109,6 +88,22 @@ function createHeader() {
     h1.textContent = "Sauga Scoops";
     header.appendChild(h1);
     body.insertBefore(header, body.firstChild);
+}
+
+function createNav(parent, tabs, activeTab) {
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+    for (const tab of tabs) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.textContent = tab;
+        if (tab == activeTab) a.setAttribute("id", "active-tab");
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+    nav.appendChild(ul);
+    parent.appendChild(nav);
 }
 
 function createFooter() {
@@ -143,9 +138,10 @@ function createFooter() {
 }
 
 function initPage() {
+    const tabs = ["Home", "Menu", "Contact"];
     const contentDiv = document.querySelector("#content");
     createHeader();
-    nav(contentDiv, "Home");
+    createNav(contentDiv, tabs, "Home");
     home(contentDiv);
     createFooter();
 }

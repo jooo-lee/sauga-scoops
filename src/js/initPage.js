@@ -1,4 +1,3 @@
-import createNav from "./nav.js";
 import createHomeContent from "./home.js";
 import githubIconSvg from "../assets/github-mark-pink.svg";
 
@@ -9,6 +8,22 @@ function createHeader() {
     h1.textContent = "Sauga Scoops";
     header.appendChild(h1);
     body.insertBefore(header, body.firstChild);
+}
+
+function createNav(parent, tabs, activeTab) {
+    const nav = document.createElement("nav");
+    const ul = document.createElement("ul");
+    for (const tab of tabs) {
+        const li = document.createElement("li");
+        const a = document.createElement("a");
+        a.setAttribute("href", "#");
+        a.textContent = tab;
+        if (tab == activeTab) a.setAttribute("id", "active-tab");
+        li.appendChild(a);
+        ul.appendChild(li);
+    }
+    nav.appendChild(ul);
+    parent.appendChild(nav);
 }
 
 function createFooter() {
@@ -43,9 +58,10 @@ function createFooter() {
 }
 
 function initPage() {
+    const tabs = ["Home", "Menu", "Contact"];
     const contentDiv = document.querySelector("#content");
     createHeader();
-    createNav(contentDiv, "Home");
+    createNav(contentDiv, tabs, "Home");
     createHomeContent(contentDiv);
     createFooter();
 }
