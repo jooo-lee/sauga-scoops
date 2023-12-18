@@ -19,8 +19,10 @@ function createNav(tabs, activeTab) {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.setAttribute("href", "#");
+        a.setAttribute("data-page", tab);
+        a.classList.add("tab");
         a.textContent = tab;
-        if (tab == activeTab) a.setAttribute("id", "active-tab");
+        if (tab == activeTab) a.classList.add("active-tab");
         li.appendChild(a);
         ul.appendChild(li);
     }

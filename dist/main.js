@@ -99,8 +99,10 @@ function createNav(tabs, activeTab) {
         const li = document.createElement("li");
         const a = document.createElement("a");
         a.setAttribute("href", "#");
+        a.setAttribute("data-page", tab);
+        a.classList.add("tab");
         a.textContent = tab;
-        if (tab == activeTab) a.setAttribute("id", "active-tab");
+        if (tab == activeTab) a.classList.add("active-tab");
         li.appendChild(a);
         ul.appendChild(li);
     }
@@ -150,11 +152,62 @@ function initPage() {
 
 /* harmony default export */ const js_initPage = (initPage);
 
+;// CONCATENATED MODULE: ./src/js/menu.js
+function createMenuContent(parent) {
+    console.log("menu content created");
+}
+
+/* harmony default export */ const menu = (createMenuContent);
+
+;// CONCATENATED MODULE: ./src/js/contact.js
+function createContactContent(parent) {
+    console.log("contact content created");
+}
+
+/* harmony default export */ const contact = (createContactContent);
+
 ;// CONCATENATED MODULE: ./src/js/index.js
 
 
 
+
+
+
 js_initPage();
+
+// Handle tab switching logic
+(function () {
+    const tabs = document.getElementsByClassName("tab");
+    for (const tab of tabs) {
+        tab.addEventListener("click", (e) => {
+            // Do nothing if active tab clicked
+            if (tab.id === "active-tab") return;
+
+            // Update active tab
+            for (const tab of tabs) {
+                tab.classList.remove("active-tab");
+            }
+            e.target.classList.add("active-tab");
+
+            // Wipe out current content and load new content
+            const contentDiv = document.querySelector("#content");
+            contentDiv.replaceChildren();
+            switch (e.target.dataset.page) {
+                case "Home":
+                    home(contentDiv);
+                    break;
+                case "Menu":
+                    menu(contentDiv);
+                    break;
+                case "Contact":
+                    contact(contentDiv);
+                    break;
+                default:
+                    break;
+            }
+        });
+    }
+})();
 
 /******/ })()
 ;

@@ -70,7 +70,7 @@ li a {
     border: 1px solid var(--theme-color);
 }
 
-#active-tab {
+.active-tab {
     color: black;
     background-color: var(--theme-color);
 }
