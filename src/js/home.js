@@ -1,4 +1,4 @@
-import twoScoopConeImg from "../assets/two-scoop-cone.png";
+import twoScoopImg from "../assets/two-scoop.png";
 
 function createQuote(parent) {
     const p = document.createElement("p");
@@ -6,12 +6,12 @@ function createQuote(parent) {
     parent.appendChild(p);
 }
 
-function createTwoScoopCone(parent) {
-    const twoScoopCone = new Image();
-    twoScoopCone.src = twoScoopConeImg;
-    twoScoopCone.setAttribute("id", "two-scoop-cone");
-    twoScoopCone.setAttribute("alt", "Two scoop ice cream cone image");
-    parent.appendChild(twoScoopCone);
+function createTwoScoop(parent) {
+    const twoScoop = new Image();
+    twoScoop.src = twoScoopImg;
+    twoScoop.setAttribute("id", "two-scoop");
+    twoScoop.setAttribute("alt", "Two scoop ice cream cone image");
+    parent.appendChild(twoScoop);
 }
 
 function createEst(parent) {
@@ -22,7 +22,7 @@ function createEst(parent) {
 
 function createHomeContent(parent) {
     createQuote(parent);
-    createTwoScoopCone(parent);
+    createTwoScoop(parent);
     createEst(parent);
 }
 
