@@ -42,8 +42,8 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/assets/two-scoop-cone.png
-const two_scoop_cone_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/assets/two-scoop.png
+const two_scoop_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
 ;// CONCATENATED MODULE: ./src/js/home.js
 
 
@@ -53,12 +53,12 @@ function createQuote(parent) {
     parent.appendChild(p);
 }
 
-function createTwoScoopCone(parent) {
-    const twoScoopCone = new Image();
-    twoScoopCone.src = two_scoop_cone_namespaceObject;
-    twoScoopCone.setAttribute("id", "two-scoop-cone");
-    twoScoopCone.setAttribute("alt", "Two scoop ice cream cone image");
-    parent.appendChild(twoScoopCone);
+function createTwoScoop(parent) {
+    const twoScoop = new Image();
+    twoScoop.src = two_scoop_namespaceObject;
+    twoScoop.setAttribute("id", "two-scoop");
+    twoScoop.setAttribute("alt", "Two scoop ice cream cone image");
+    parent.appendChild(twoScoop);
 }
 
 function createEst(parent) {
@@ -69,7 +69,7 @@ function createEst(parent) {
 
 function createHomeContent(parent) {
     createQuote(parent);
-    createTwoScoopCone(parent);
+    createTwoScoop(parent);
     createEst(parent);
 }
 
