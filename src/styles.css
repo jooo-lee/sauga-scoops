@@ -108,7 +108,7 @@ li a {
 }
 
 #two-scoop {
-    width: min(450px, 100%);
+    width: min(300px, 100%);
 }
 
 /* -------------------------- Menu Content -------------------------- */
@@ -197,4 +197,17 @@ footer p {
 
 #github-icon {
     height: 1.5rem;
+}
+
+/* -------------------------- Larger Screens -------------------------- */
+
+@media only screen and (min-width: 768px) {
+    #content {
+        flex: initial;
+        height: min(500px, 100%);
+    }
+
+    footer {
+        margin-top: auto;
+    }
 }
