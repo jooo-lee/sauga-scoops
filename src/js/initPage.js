@@ -39,6 +39,7 @@ function createFooter() {
         "href",
         "https://www.freepik.com/author/surang/icons/surang-red_752?t=f&query=ice+cream"
     );
+    freepikLink.setAttribute("id", "freepik-link");
     freepikLink.textContent = "Ice Cream Icons from Freepik";
     freepikLink.setAttribute("target", "_blank");
     topDiv.appendChild(freepikLink);
