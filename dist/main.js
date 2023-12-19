@@ -152,9 +152,113 @@ function initPage() {
 
 /* harmony default export */ const js_initPage = (initPage);
 
+;// CONCATENATED MODULE: ./src/menu-imgs/one-scoop.png
+const one_scoop_namespaceObject = __webpack_require__.p + "assets/64b307ec01685fd02701.png";
+;// CONCATENATED MODULE: ./src/menu-imgs/two-scoop.png
+const menu_imgs_two_scoop_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
+;// CONCATENATED MODULE: ./src/menu-imgs/soft-serve-1.png
+const soft_serve_1_namespaceObject = __webpack_require__.p + "assets/2f58d1faeb3c957b60bc.png";
+;// CONCATENATED MODULE: ./src/menu-imgs/soft-serve-2.png
+const soft_serve_2_namespaceObject = __webpack_require__.p + "assets/6e4eeea58f261364bb23.png";
+;// CONCATENATED MODULE: ./src/menu-imgs/popsicle.png
+const popsicle_namespaceObject = __webpack_require__.p + "assets/1daa04e7f7cb94f68763.png";
+;// CONCATENATED MODULE: ./src/menu-imgs/carrot.png
+const carrot_namespaceObject = __webpack_require__.p + "assets/03d7224cf2f840351ddb.png";
 ;// CONCATENATED MODULE: ./src/js/menu.js
+
+
+
+
+
+
+
+function createImg(img) {
+    const newImg = new Image();
+    newImg.src = img;
+    newImg.classList.add("menu-img");
+    return newImg;
+}
+
+function createTitle(text) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    p.classList.add("menu-item-title");
+    return p;
+}
+
+function createDescription(text) {
+    const p = document.createElement("p");
+    p.textContent = text;
+    p.classList.add("menu-item-description");
+    return p;
+}
+
+function createCard() {
+    const div = document.createElement("div");
+    div.classList.add("menu-card");
+    return div;
+}
+
+const oneScoopCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(one_scoop_namespaceObject));
+    card.appendChild(createTitle("Single Scooper"));
+    card.appendChild(createDescription("Sometimes one scoop is enough."));
+    return card;
+})();
+
+const twoScoopCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(menu_imgs_two_scoop_namespaceObject));
+    card.appendChild(createTitle("Double Scooper"));
+    card.appendChild(createDescription("When you need more than one scoop."));
+    return card;
+})();
+
+const oneFlavSoftCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(soft_serve_1_namespaceObject));
+    card.appendChild(createTitle("Single Flavour Soft Serve"));
+    card.appendChild(createDescription("Ice cream but softer."));
+    return card;
+})();
+
+const twoFlavSoftCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(soft_serve_2_namespaceObject));
+    card.appendChild(createTitle("Double Flavour Soft Serve"));
+    card.appendChild(createDescription("Not one, but TWO flavours!"));
+    return card;
+})();
+
+const popsicleCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(popsicle_namespaceObject));
+    card.appendChild(createTitle("Popsicle"));
+    card.appendChild(createDescription("Share with your friend. Or don't."));
+    return card;
+})();
+
+const carrotSoftCard = (() => {
+    const card = createCard();
+    card.appendChild(createImg(carrot_namespaceObject));
+    card.appendChild(createTitle("Carrot Soft Serve"));
+    card.appendChild(createDescription("Limited and delicious. Trust me."));
+    return card;
+})();
+
 function createMenuContent(parent) {
-    console.log("menu content created");
+    const div = document.createElement("div");
+    div.setAttribute("id", "menu-content");
+
+    div.appendChild(oneScoopCard);
+    div.appendChild(twoScoopCard);
+    div.appendChild(oneFlavSoftCard);
+    div.appendChild(twoFlavSoftCard);
+    div.appendChild(popsicleCard);
+    div.appendChild(carrotSoftCard);
+
+    parent.appendChild(div);
 }
 
 /* harmony default export */ const menu = (createMenuContent);
