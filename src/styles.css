@@ -148,7 +148,7 @@ li a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 12px;
+    gap: 24px;
 }
 
 #contact-content h2 {
