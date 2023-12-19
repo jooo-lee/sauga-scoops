@@ -137,6 +137,23 @@ li a {
     gap: 12px;
 }
 
+/* -------------------------- Contact Content -------------------------- */
+
+#contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#contact-content h2 {
+    padding-bottom: 6px;
+}
+
+#contact-content p {
+    font-size: 1rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* -------------------------- Footer -------------------------- */
 
 footer {
