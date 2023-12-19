@@ -8,7 +8,7 @@ import carrotSoftImg from "../menu-imgs/carrot.png";
 function createImg(img) {
     const newImg = new Image();
     newImg.src = img;
-    newImg.classList.add("menu-img");
+    newImg.classList.add("menu-item-img");
     return newImg;
 }
 
