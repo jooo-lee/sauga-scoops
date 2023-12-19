@@ -1,29 +1,34 @@
 import twoScoopImg from "../assets/two-scoop.png";
 
-function createQuote(parent) {
+const quote = (() => {
     const p = document.createElement("p");
     p.textContent = "BEST ICE CREAM IN THE CITY";
-    parent.appendChild(p);
-}
+    return p;
+})();
 
-function createTwoScoop(parent) {
+const twoScoop = (() => {
     const twoScoop = new Image();
     twoScoop.src = twoScoopImg;
     twoScoop.setAttribute("id", "two-scoop");
     twoScoop.setAttribute("alt", "Two scoop ice cream cone image");
-    parent.appendChild(twoScoop);
-}
+    return twoScoop;
+})();
 
-function createEst(parent) {
+const establishmentDate = (() => {
     const p = document.createElement("p");
     p.textContent = "SCOOPIN' SINCE 2000";
-    parent.appendChild(p);
-}
+    return p;
+})();
 
 function createHomeContent(parent) {
-    createQuote(parent);
-    createTwoScoop(parent);
-    createEst(parent);
+    const div = document.createElement("div");
+    div.setAttribute("id", "home-content");
+
+    div.appendChild(quote);
+    div.appendChild(twoScoop);
+    div.appendChild(establishmentDate);
+
+    parent.appendChild(div);
 }
 
 export default createHomeContent;

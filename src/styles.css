@@ -95,13 +95,17 @@ li a {
     font-size: 1.2rem;
     text-align: center;
     flex: 1;
+}
+
+/* -------------------------- Home Content -------------------------- */
+
+#home-content {
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
 }
-
-/* -------------------------- Home Content -------------------------- */
 
 #two-scoop {
     width: min(450px, 100%);
