@@ -180,7 +180,7 @@ const carrot_namespaceObject = __webpack_require__.p + "assets/03d7224cf2f840351
 function createImg(img) {
     const newImg = new Image();
     newImg.src = img;
-    newImg.classList.add("menu-img");
+    newImg.classList.add("menu-item-img");
     return newImg;
 }
 
