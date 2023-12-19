@@ -184,10 +184,15 @@ footer div {
 }
 
 footer a {
+    font-family: Arial, Helvetica, sans-serif;
     color: var(--theme-color);
     text-decoration: none;
     display: flex;
     align-items: center;
+}
+
+footer p {
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 #github-icon {
