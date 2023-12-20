@@ -86,6 +86,15 @@ const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51
 
 
 
+
+function createFavicon() {
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.href = two_scoop_namespaceObject;
+    link.type = "image/x-icon";
+    document.head.appendChild(link);
+}
+
 function createHeader() {
     const body = document.querySelector("body");
     const header = document.createElement("header");
@@ -148,6 +157,7 @@ function createFooter() {
 }
 
 function initPage() {
+    createFavicon();
     const tabs = ["Home", "Menu", "Contact"];
     const contentDiv = document.querySelector("#content");
     createHeader();

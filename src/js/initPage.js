@@ -1,5 +1,14 @@
+import faviconImg from "../assets/menu-imgs/two-scoop.png";
 import createHomeContent from "./home.js";
 import githubIconSvg from "../assets/github-mark-pink.svg";
+
+function createFavicon() {
+    const link = document.createElement("link");
+    link.rel = "icon";
+    link.href = faviconImg;
+    link.type = "image/x-icon";
+    document.head.appendChild(link);
+}
 
 function createHeader() {
     const body = document.querySelector("body");
@@ -63,6 +72,7 @@ function createFooter() {
 }
 
 function initPage() {
+    createFavicon();
     const tabs = ["Home", "Menu", "Contact"];
     const contentDiv = document.querySelector("#content");
     createHeader();
