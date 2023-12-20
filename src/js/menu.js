@@ -1,9 +1,9 @@
-import oneScoopImg from "../menu-imgs/one-scoop.png";
-import twoScoopImg from "../menu-imgs/two-scoop.png";
-import oneFlavSoftImg from "../menu-imgs/soft-serve-1.png";
-import twoFlavSoftImg from "../menu-imgs/soft-serve-2.png";
-import popsicleImg from "../menu-imgs/popsicle.png";
-import carrotSoftImg from "../menu-imgs/carrot.png";
+import oneScoopImg from "../assets/menu-imgs/one-scoop.png";
+import twoScoopImg from "../assets/menu-imgs/two-scoop.png";
+import oneFlavSoftImg from "../assets/menu-imgs/soft-serve-1.png";
+import twoFlavSoftImg from "../assets/menu-imgs/soft-serve-2.png";
+import popsicleImg from "../assets/menu-imgs/popsicle.png";
+import carrotSoftImg from "../assets/menu-imgs/carrot.png";
 
 function createImg(img) {
     const newImg = new Image();

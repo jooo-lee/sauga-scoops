@@ -1,4 +1,4 @@
-import twoScoopImg from "../assets/two-scoop.png";
+import twoScoopImg from "../assets/menu-imgs/two-scoop.png";
 
 const quote = (() => {
     const p = document.createElement("p");
