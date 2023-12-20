@@ -42,7 +42,7 @@
 /************************************************************************/
 var __webpack_exports__ = {};
 
-;// CONCATENATED MODULE: ./src/assets/two-scoop.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/two-scoop.png
 const two_scoop_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
 ;// CONCATENATED MODULE: ./src/js/home.js
 
@@ -158,17 +158,15 @@ function initPage() {
 
 /* harmony default export */ const js_initPage = (initPage);
 
-;// CONCATENATED MODULE: ./src/menu-imgs/one-scoop.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/one-scoop.png
 const one_scoop_namespaceObject = __webpack_require__.p + "assets/64b307ec01685fd02701.png";
-;// CONCATENATED MODULE: ./src/menu-imgs/two-scoop.png
-const menu_imgs_two_scoop_namespaceObject = __webpack_require__.p + "assets/606f7271e59468b1675a.png";
-;// CONCATENATED MODULE: ./src/menu-imgs/soft-serve-1.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/soft-serve-1.png
 const soft_serve_1_namespaceObject = __webpack_require__.p + "assets/2f58d1faeb3c957b60bc.png";
-;// CONCATENATED MODULE: ./src/menu-imgs/soft-serve-2.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/soft-serve-2.png
 const soft_serve_2_namespaceObject = __webpack_require__.p + "assets/6e4eeea58f261364bb23.png";
-;// CONCATENATED MODULE: ./src/menu-imgs/popsicle.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/popsicle.png
 const popsicle_namespaceObject = __webpack_require__.p + "assets/1daa04e7f7cb94f68763.png";
-;// CONCATENATED MODULE: ./src/menu-imgs/carrot.png
+;// CONCATENATED MODULE: ./src/assets/menu-imgs/carrot.png
 const carrot_namespaceObject = __webpack_require__.p + "assets/03d7224cf2f840351ddb.png";
 ;// CONCATENATED MODULE: ./src/js/menu.js
 
@@ -215,7 +213,7 @@ const oneScoopCard = (() => {
 
 const twoScoopCard = (() => {
     const card = createCard();
-    card.appendChild(createImg(menu_imgs_two_scoop_namespaceObject));
+    card.appendChild(createImg(two_scoop_namespaceObject));
     card.appendChild(createTitle("Double Scooper"));
     card.appendChild(createDescription("When you need more than one scoop."));
     return card;
