@@ -166,13 +166,13 @@ footer {
     background-color: black;
     color: var(--theme-color);
     width: fit-content;
-    padding: 8px;
+    padding: 10px;
     border: 1px solid var(--theme-color);
     border-radius: 8px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 4px;
+    gap: 8px;
 }
 
 footer div {
@@ -211,5 +211,21 @@ footer p {
 
     footer {
         margin-top: auto;
+    }
+}
+
+/* -------------------------- Hover Effects -------------------------- */
+
+@media (hover: hover) {
+    nav a:hover {
+        transform: skew(-10deg);
+    }
+
+    #freepik-link:hover {
+        text-decoration: none;
+    }
+
+    #github-link:hover {
+        transform: scale(1.2);
     }
 }
