@@ -82,7 +82,7 @@ const carrotSoftCard = (() => {
 
 function createMenuContent(parent) {
     const div = document.createElement("div");
-    div.setAttribute("id", "menu-content");
+    div.id = "menu-content";
 
     div.appendChild(oneScoopCard);
     div.appendChild(twoScoopCard);

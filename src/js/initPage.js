@@ -27,7 +27,7 @@ function createNav(tabs, activeTab) {
     for (const tab of tabs) {
         const li = document.createElement("li");
         const a = document.createElement("a");
-        a.setAttribute("href", "#");
+        a.href = "#";
         a.setAttribute("data-page", tab);
         a.classList.add("tab");
         a.textContent = tab;
@@ -44,13 +44,11 @@ function createFooter() {
     const footer = document.createElement("footer");
     const topDiv = document.createElement("div");
     const freepikLink = document.createElement("a");
-    freepikLink.setAttribute(
-        "href",
-        "https://www.freepik.com/author/surang/icons/surang-red_752?t=f&query=ice+cream"
-    );
-    freepikLink.setAttribute("id", "freepik-link");
+    freepikLink.href =
+        "https://www.freepik.com/author/surang/icons/surang-red_752?t=f&query=ice+cream";
+    freepikLink.id = "freepik-link";
     freepikLink.textContent = "Ice Cream Icons from Freepik";
-    freepikLink.setAttribute("target", "_blank");
+    freepikLink.target = "_blank";
     topDiv.appendChild(freepikLink);
     footer.appendChild(topDiv);
     const bottomDiv = document.createElement("div");
@@ -58,13 +56,13 @@ function createFooter() {
     p.textContent = "© Joseph Lee 2023";
     bottomDiv.appendChild(p);
     const githubLink = document.createElement("a");
-    githubLink.setAttribute("id", "github-link");
-    githubLink.setAttribute("href", "https://github.com/jooo-lee");
-    githubLink.setAttribute("target", "_blank");
+    githubLink.id = "github-link";
+    githubLink.href = "https://github.com/jooo-lee";
+    githubLink.target = "_blank";
     const githubIcon = new Image();
     githubIcon.src = githubIconSvg;
-    githubIcon.setAttribute("id", "github-icon");
-    githubIcon.setAttribute("alt", "GitHub icon");
+    githubIcon.id = "github-icon";
+    githubIcon.alt = "GitHub icon";
     githubLink.appendChild(githubIcon);
     bottomDiv.appendChild(githubLink);
     footer.appendChild(bottomDiv);

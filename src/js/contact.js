@@ -42,7 +42,7 @@ const openingHrs = (() => {
 
 function createContactContent(parent) {
     const div = document.createElement("div");
-    div.setAttribute("id", "contact-content");
+    div.id = "contact-content";
 
     div.appendChild(location);
     div.appendChild(phoneNum);

@@ -9,8 +9,8 @@ const quote = (() => {
 const twoScoop = (() => {
     const twoScoop = new Image();
     twoScoop.src = twoScoopImg;
-    twoScoop.setAttribute("id", "two-scoop");
-    twoScoop.setAttribute("alt", "Two scoop ice cream cone image");
+    twoScoop.id = "two-scoop";
+    twoScoop.alt = "Two scoop ice cream cone image";
     return twoScoop;
 })();
 
@@ -22,7 +22,7 @@ const establishmentDate = (() => {
 
 function createHomeContent(parent) {
     const div = document.createElement("div");
-    div.setAttribute("id", "home-content");
+    div.id = "home-content";
 
     div.appendChild(quote);
     div.appendChild(twoScoop);
