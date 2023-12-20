@@ -87,28 +87,30 @@ const github_mark_pink_namespaceObject = __webpack_require__.p + "assets/8d11c51
 
 
 
-function createFavicon() {
+const faviconLink = (() => {
     const link = document.createElement("link");
     link.rel = "icon";
     link.href = two_scoop_namespaceObject;
     link.type = "image/x-icon";
-    document.head.appendChild(link);
-}
+    return link;
+})();
 
-function createHeader() {
-    const body = document.querySelector("body");
+const header = (() => {
     const header = document.createElement("header");
     const h1 = document.createElement("h1");
     h1.textContent = "Sauga Scoops";
     header.appendChild(h1);
-    body.insertBefore(header, body.firstChild);
-}
+    return header;
+})();
 
-function createNav(tabs, activeTab) {
-    const body = document.querySelector("body");
-    const contentDiv = document.querySelector("#content");
+const nav = (() => {
+    const tabs = ["Home", "Menu", "Contact"];
+    const activeTab = tabs[0];
+
     const nav = document.createElement("nav");
     const ul = document.createElement("ul");
+
+    // Create anchor tag for each tab
     for (const tab of tabs) {
         const li = document.createElement("li");
         const a = document.createElement("a");
@@ -120,13 +122,15 @@ function createNav(tabs, activeTab) {
         li.appendChild(a);
         ul.appendChild(li);
     }
-    nav.appendChild(ul);
-    body.insertBefore(nav, contentDiv);
-}
 
-function createFooter() {
-    const body = document.querySelector("body");
+    nav.appendChild(ul);
+    return nav;
+})();
+
+const footer = (() => {
     const footer = document.createElement("footer");
+
+    // Create top half of footer
     const topDiv = document.createElement("div");
     const freepikLink = document.createElement("a");
     freepikLink.href =
@@ -136,6 +140,8 @@ function createFooter() {
     freepikLink.target = "_blank";
     topDiv.appendChild(freepikLink);
     footer.appendChild(topDiv);
+
+    // Create bottom half of footer
     const bottomDiv = document.createElement("div");
     const p = document.createElement("p");
     p.textContent = "© Joseph Lee 2023";
@@ -150,18 +156,22 @@ function createFooter() {
     githubIcon.alt = "GitHub icon";
     githubLink.appendChild(githubIcon);
     bottomDiv.appendChild(githubLink);
+
     footer.appendChild(bottomDiv);
-    body.appendChild(footer);
-}
+    return footer;
+})();
 
 function initPage() {
-    createFavicon();
-    const tabs = ["Home", "Menu", "Contact"];
+    document.head.appendChild(faviconLink);
+
+    const body = document.querySelector("body");
     const contentDiv = document.querySelector("#content");
-    createHeader();
-    createNav(tabs, "Home");
+
+    body.insertBefore(header, body.firstChild);
+    body.insertBefore(nav, contentDiv);
+    body.appendChild(footer);
+
     home(contentDiv);
-    createFooter();
 }
 
 /* harmony default export */ const js_initPage = (initPage);
