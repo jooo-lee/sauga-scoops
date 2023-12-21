@@ -26,59 +26,52 @@ function createDescription(text) {
     return p;
 }
 
-function createCard() {
+function createCard(img, title, description) {
     const div = document.createElement("div");
     div.classList.add("menu-card");
+
+    div.appendChild(createImg(img));
+    div.appendChild(createTitle(title));
+    div.appendChild(createDescription(description));
+
     return div;
 }
 
-const oneScoopCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(oneScoopImg));
-    card.appendChild(createTitle("Single Scooper"));
-    card.appendChild(createDescription("Sometimes one scoop is enough."));
-    return card;
-})();
+const oneScoopCard = createCard(
+    oneScoopImg,
+    "Single Scooper",
+    "Sometimes one scoop is enough."
+);
 
-const twoScoopCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(twoScoopImg));
-    card.appendChild(createTitle("Double Scooper"));
-    card.appendChild(createDescription("When you need more than one scoop."));
-    return card;
-})();
+const twoScoopCard = createCard(
+    twoScoopImg,
+    "Double Scooper",
+    "When you need more than one scoop."
+);
 
-const oneFlavSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(oneFlavSoftImg));
-    card.appendChild(createTitle("Single Flavour Soft Serve"));
-    card.appendChild(createDescription("Ice cream but softer."));
-    return card;
-})();
+const oneFlavSoftCard = createCard(
+    oneFlavSoftImg,
+    "Single Flavour Soft Serve",
+    "Ice cream but softer."
+);
 
-const twoFlavSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(twoFlavSoftImg));
-    card.appendChild(createTitle("Double Flavour Soft Serve"));
-    card.appendChild(createDescription("Not one, but TWO flavours!"));
-    return card;
-})();
+const twoFlavSoftCard = createCard(
+    twoFlavSoftImg,
+    "Double Flavour Soft Serve",
+    "Not one, but TWO flavours!"
+);
 
-const popsicleCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(popsicleImg));
-    card.appendChild(createTitle("Popsicle"));
-    card.appendChild(createDescription("Share with your friend. Or don't."));
-    return card;
-})();
+const popsicleCard = createCard(
+    popsicleImg,
+    "Popsicle",
+    "Share with your friend. Or don't."
+);
 
-const carrotSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(carrotSoftImg));
-    card.appendChild(createTitle("Carrot Soft Serve"));
-    card.appendChild(createDescription("Limited and delicious. Trust me."));
-    return card;
-})();
+const carrotSoftCard = createCard(
+    carrotSoftImg,
+    "Carrot Soft Serve",
+    "Limited and delicious. Trust me."
+);
 
 function createMenuContent(parent) {
     const div = document.createElement("div");

@@ -215,59 +215,52 @@ function createDescription(text) {
     return p;
 }
 
-function createCard() {
+function createCard(img, title, description) {
     const div = document.createElement("div");
     div.classList.add("menu-card");
+
+    div.appendChild(createImg(img));
+    div.appendChild(createTitle(title));
+    div.appendChild(createDescription(description));
+
     return div;
 }
 
-const oneScoopCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(one_scoop_namespaceObject));
-    card.appendChild(createTitle("Single Scooper"));
-    card.appendChild(createDescription("Sometimes one scoop is enough."));
-    return card;
-})();
+const oneScoopCard = createCard(
+    one_scoop_namespaceObject,
+    "Single Scooper",
+    "Sometimes one scoop is enough."
+);
 
-const twoScoopCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(two_scoop_namespaceObject));
-    card.appendChild(createTitle("Double Scooper"));
-    card.appendChild(createDescription("When you need more than one scoop."));
-    return card;
-})();
+const twoScoopCard = createCard(
+    two_scoop_namespaceObject,
+    "Double Scooper",
+    "When you need more than one scoop."
+);
 
-const oneFlavSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(soft_serve_1_namespaceObject));
-    card.appendChild(createTitle("Single Flavour Soft Serve"));
-    card.appendChild(createDescription("Ice cream but softer."));
-    return card;
-})();
+const oneFlavSoftCard = createCard(
+    soft_serve_1_namespaceObject,
+    "Single Flavour Soft Serve",
+    "Ice cream but softer."
+);
 
-const twoFlavSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(soft_serve_2_namespaceObject));
-    card.appendChild(createTitle("Double Flavour Soft Serve"));
-    card.appendChild(createDescription("Not one, but TWO flavours!"));
-    return card;
-})();
+const twoFlavSoftCard = createCard(
+    soft_serve_2_namespaceObject,
+    "Double Flavour Soft Serve",
+    "Not one, but TWO flavours!"
+);
 
-const popsicleCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(popsicle_namespaceObject));
-    card.appendChild(createTitle("Popsicle"));
-    card.appendChild(createDescription("Share with your friend. Or don't."));
-    return card;
-})();
+const popsicleCard = createCard(
+    popsicle_namespaceObject,
+    "Popsicle",
+    "Share with your friend. Or don't."
+);
 
-const carrotSoftCard = (() => {
-    const card = createCard();
-    card.appendChild(createImg(carrot_namespaceObject));
-    card.appendChild(createTitle("Carrot Soft Serve"));
-    card.appendChild(createDescription("Limited and delicious. Trust me."));
-    return card;
-})();
+const carrotSoftCard = createCard(
+    carrot_namespaceObject,
+    "Carrot Soft Serve",
+    "Limited and delicious. Trust me."
+);
 
 function createMenuContent(parent) {
     const div = document.createElement("div");
