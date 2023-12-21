@@ -68,7 +68,7 @@ nav ul {
     gap: 12px;
 }
 
-li a {
+.tab {
     display: inline-block;
     text-decoration: none;
     background-color: black;
@@ -217,7 +217,7 @@ footer p {
 /* -------------------------- Hover Effects -------------------------- */
 
 @media (hover: hover) {
-    nav a:hover {
+    .tab:hover {
         transform: skew(-10deg);
     }
 

@@ -15,7 +15,6 @@ function createImg(img) {
 function createTitle(text) {
     const p = document.createElement("p");
     p.textContent = text;
-    p.classList.add("menu-item-title");
     return p;
 }
 
